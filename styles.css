@@ -12,9 +12,10 @@ body {
 }
 
 /* MAIN */
-main {
+.main {
   height: 100vh;
   gap: 50px;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,17 +36,67 @@ main {
 .slideInLeftCard {
   background-color: var(--cardFromLeft);
   color: whitesmoke;
+  animation-name: SLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
 }
 
+@keyframes SLeft {
+  from {transform:translateX(-60vw) ; min-width: fit-content; width: 50px; color: transparent;}
+  20%{color: transparent;}
+  to {transform: translateX(o);min-width: fit-content;width: 300px;}/* burde brukt margin... nei margin virket dorlig*/
+}
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
 .slideInRightCard {
   background-color: var(--cardFromRight);
+  animation: SRight 1.5s ease 0s;
+}
+
+@keyframes SRight{
+  from{transform: translateX(70vw);min-width: fit-content; width: 50px; color: transparent;}
+  20%{color: transparent;}
+  to{transform: translateX(0);min-width: fit-content;width: 300px;}
+}
+
+.rotateCard1 {
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: var(--rotate);
+  animation-name: rotater;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes rotater{
+  20%{transform: rotate(10deg)ease;}
+  95%{transform:rotate(370deg);}
+  to{transform:rotate(360deg);}
 }
 
 .rotateCard {
   padding: 20px;
   width: 100px;
   height: 100px;
-  background-color: var(--rotate);
+  background-image: url("pictures/Circular-saw-blade-for-wood-work-on-transparent-background-PNG.png");
+  background-position: center;
+  background-size: cover;
+  animation-name: buzzaw;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes buzzaw{
+  to{rotate: 1800deg;}
+}
+
+.flexColCenter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .buttonContainer {
@@ -62,3 +113,12 @@ main {
   border-style: solid;
   box-shadow: 2px 2px 5px lightgrey;
 }
+.buttonColor{
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+.buttonColor:hover{
+  background-color: #8de969;
+}
+
+
