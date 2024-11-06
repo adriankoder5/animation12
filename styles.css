@@ -21,13 +21,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+/* cards */
 .card {
   max-width: 500px;
   min-width: 300px;
   border-style: solid;
   border-width: 2px;
   border-color: lightgrey;
+  text-align: center;
   padding: 10px;
   border-radius: 20px;
   box-shadow: 2px 2px 7px #d3d3d3;
@@ -63,6 +64,7 @@ body {
   padding: 20px;
   width: 100px;
   height: 100px;
+  border-radius: 5%;
   background-color: var(--rotate);
   animation-name: rotater;
   animation-duration: 1.5s;
@@ -70,15 +72,19 @@ body {
 }
 
 @keyframes rotater{
+  from{border-radius: 100%;}
   20%{transform: rotate(10deg)ease;}
-  95%{transform:rotate(370deg);}
-  to{transform:rotate(360deg);}
+  85%{border-radius: 0%;}
+  95%{transform:rotate(365deg);border-radius: 0%;}
+  to{transform:rotate(360deg);border-radius: 5%;}
 }
 
 .rotateCard {
   padding: 20px;
   width: 100px;
   height: 100px;
+  border-radius: 100%;
+  cursor:none;
   background-image: url("pictures/Circular-saw-blade-for-wood-work-on-transparent-background-PNG.png");
   background-position: center;
   background-size: cover;
@@ -91,6 +97,19 @@ body {
 @keyframes buzzaw{
   to{rotate: 1800deg;}
 }
+.move{
+  animation-name: mover;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode:both;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+@keyframes mover{
+  from{transform: translateX(-10vw);}
+  to{transform: translateX(10vw);}
+}
+
 
 .flexColCenter{
   display: flex;
@@ -98,7 +117,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+/* buttons */
+/* --------------------------------------------------------------------------------------------------- */
 .buttonContainer {
   display: flex;
   gap: 10px;
@@ -113,12 +133,22 @@ body {
   border-style: solid;
   box-shadow: 2px 2px 5px lightgrey;
 }
-.buttonColor{
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in;
-}
-.buttonColor:hover{
-  background-color: #8de969;
+
+/* col */
+.buttonColor{ transition-duration: 0.5s;transition-timing-function: ease-in;
 }
 
+.buttonColor:hover{ background-color: #8de969;
+}
+/* size */
+.buttonSize{  transition-duration: 0.5s;
+}
 
+.buttonSize:hover{  width: 400px;border-radius: 50px 7px;
+}
+/* disapair */
+.buttonOpacity{ transition-duration: 0.5s;
+}
+
+.buttonOpacity:hover{ opacity: 0;
+}
