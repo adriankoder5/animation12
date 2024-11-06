@@ -138,7 +138,20 @@ body {
 .buttonColor{ transition-duration: 0.5s;transition-timing-function: ease-in;
 }
 
-.buttonColor:hover{ background-color: #8de969;
+.buttonColor:hover{ background-color: #8de969;animation-name: test;animation-duration: 3s;animation-fill-mode: both;animation-iteration-count: infinite;
+}
+@keyframes test{
+  0%{background-color: #781818;}
+  10%{background-color: #784b18;}
+  20%{background-color: #786e18;}
+  30%{background-color: #4b7818;}
+  40%{background-color: #18781b;}
+  50%{background-color: #187848;}
+  60%{background-color: #186578;}
+  70%{background-color: #1b1878;}
+  80%{background-color: #521878;}
+  90%{background-color: #781872;}
+  100%{background-color: #781842;}
 }
 /* size */
 .buttonSize{  transition-duration: 0.5s;
