@@ -20,7 +20,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* animation-name: screenshake; */
+  /* animation-duration: 0.2s; */
 }
+/* @keyframes screenshake{from{rotate:-3deg;}to{rotate:3deg;}} */
 /* cards */
 .card {
   max-width: 500px;
@@ -44,7 +47,7 @@ body {
 
 @keyframes SLeft {
   from {transform:translateX(-60vw) ; min-width: fit-content; width: 50px; color: transparent;}
-  20%{color: transparent;}
+  25%{color: transparent;}
   to {transform: translateX(o);min-width: fit-content;width: 300px;}/* burde brukt margin... nei margin virket dorlig*/
 }
 
@@ -56,7 +59,7 @@ body {
 
 @keyframes SRight{
   from{transform: translateX(70vw);min-width: fit-content; width: 50px; color: transparent;}
-  20%{color: transparent;}
+  25%{color: transparent;}
   to{transform: translateX(0);min-width: fit-content;width: 300px;}
 }
 
@@ -138,9 +141,9 @@ body {
 .buttonColor{ transition-duration: 0.5s;transition-timing-function: ease-in;
 }
 
-.buttonColor:hover{ background-color: #8de969;animation-name: test;animation-duration: 3s;animation-fill-mode: both;animation-iteration-count: infinite;
+.buttonColor:hover{cursor: wait; color: white;animation-name: rainbowIsh;animation-duration: 3s;animation-fill-mode: both;animation-iteration-count: infinite;
 }
-@keyframes test{
+@keyframes rainbowIsh{
   0%{background-color: #781818;}
   10%{background-color: #784b18;}
   20%{background-color: #786e18;}
@@ -157,11 +160,11 @@ body {
 .buttonSize{  transition-duration: 0.5s;
 }
 
-.buttonSize:hover{  width: 400px;border-radius: 50px 7px;
+.buttonSize:hover{  width: 400px;border-radius: 50px 7px;cursor:zoom-in;
 }
 /* disapair */
 .buttonOpacity{ transition-duration: 0.5s;
 }
 
-.buttonOpacity:hover{ opacity: 0;
+.buttonOpacity:hover{ opacity: 0; cursor:help;
 }
