@@ -90,7 +90,7 @@ body {
   cursor: none;
   background-image: url("pictures/Circular-saw-blade-for-wood-work-on-transparent-background-PNG.png");
   background-position: center;
-  background-size: cover;
+  background-size: 125%;
   animation-name: buzzaw;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
